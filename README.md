@@ -453,4 +453,4 @@ _Whether it's failing at logging into accounts, resetting a password, or protect
 <h2><p align=center>Next Demonstration:<br><a href="https://github.com/terikaj/azure-network-protocols"> Network Security Groups (NSGs) and Inspecting Network Protocols</a></p></h2>
 
 <p align=right> Please delete & clean up your Azure resources when finished!<br>
-If you don't know how to, click <a href="https://github.com/terikaj/azure-begin?tab=readme-ov-file">HERE</a>
+If you're unsure of how to do this, please click <a href="https://github.com/terikaj/azure-begin?tab=readme-ov-file">HERE</a>
