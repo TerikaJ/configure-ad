@@ -4,14 +4,14 @@
 
 <h1>Microsoft Azure - Active Directory (AD)</h1>
 
-This demonstration outlines the implementation of on-premises Active Directory within Azure Virtual Machines.
+This demonstration outlines the implementation process of on-premises Active Directory within Azure Virtual Machines.
 
 _<b>NOTE:</b> This demonstration uses materials created in the previous demonstration, ["Creating an Azure Account ➔ Establishing a Virtual Machine"](https://github.com/terikaj/azure-begin?tab=readme-ov-file)._
 
 <h2>Environments and Technologies Used</h2>
 
-- Microsoft Azure (Virtual Machines/Compute)
-- Remote Desktop
+- Microsoft Azure (Virtual Machine Resource)
+- Microsoft Remote Desktop
 - Active Directory Domain Services
 - PowerShell
 
@@ -24,13 +24,14 @@ _<b>NOTE:</b> This demonstration uses materials created in the previous demonstr
 
 - Setup 2 Virtual Machines within Azure:
   - Domain Controller VM (Windows Server 2022) -- set Private IP Address to STATIC
-  - Client VM (Windows 10) -- using same Resource Group and Vnet as DC
+  - Client VM (Windows 10) -- using same Resource Group and Vnet as the Domain Controller
 - Login to both VMs using Remote Desktop (RDP).
-- Enable Inbound Rules for "Core Networking Diagnostics" within Domain Controller's Firewall to ensure connectivity between the Client and Domain Controller.
-- Install Active Directory Domain Services within Domain Controller VM
-- Create an Admin and Standard User Account in AD
-- Link Cilent VM to a domain, then login using original admin account
-- Setup Remote Desktop for non-administrative users on Client VM
+- Enable Inbound Rules for "Core Networking Diagnostics" within the Domain Controller's Firewall.
+- This is to ensure connectivity between the Client and Domain Controller.
+- Install Active Directory Domain Services within the Domain Controller Virtual Machine. 
+- Create an Administrator and Standard User Account in Active Directory.
+- Link Client Virtual Machine to a domain, then login using original Administrator account.
+- Setup the Remote Desktop for Non-Administrative users on the Client Virtual Machine.
 - Create additional users and attempt to log into Client VM as one of those newly created users
 
 <h2>Step Process</h2>
