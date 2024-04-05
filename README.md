@@ -339,7 +339,6 @@ _The user account is located inside the folder named `_ADMINS`, however, it does
 - If done correctly, you should see a welcoming window appear to joining the domain.
 - Click "OK" again and you'll be prompted to restart the computer.
 <p align="center">
-<img width="434" alt="AD 51" src="https://github.com/TerikaJ/configure-ad/assets/136477450/955feb2b-21c4-440b-a416-5b38f5c5eb7b">
 <img src="https://i.imgur.com/WjWrOQL.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
 <img src="https://i.imgur.com/ylYxFqS.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
 </p>
@@ -348,7 +347,7 @@ _The user account is located inside the folder named `_ADMINS`, however, it does
 - Click "Use a different account", for now we will logon using the jane_admin account.
   - _The admin account is already logged onto the DC-01 VM, but this time we are logging in through the Client-01 VM._
 <p align="center">
-<img src="https://i.imgur.com/zM9oOdR.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
+<img width="434" alt="AD 51" src="https://github.com/TerikaJ/configure-ad/assets/136477450/955feb2b-21c4-440b-a416-5b38f5c5eb7b">
 </p>
 <hr>
 
@@ -356,31 +355,32 @@ _The user account is located inside the folder named `_ADMINS`, however, it does
 
 - Right-click the Windows Button and select "System", then click "Remote Desktop".
 <p align="center">
-<img src="https://i.imgur.com/6ddD3c5.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
+<img width="187" alt="AD 52 Step 8 Begins" src="https://github.com/TerikaJ/configure-ad/assets/136477450/6e521235-848c-41ac-8297-1b77541b7e8e">
 </p>
 
-- At the bottom, click "Select users that can remotely access this PC".
+- Click "Select users that can remotely access this PC".
 <p align="center">
-<img src="https://i.imgur.com/C6Bb4qG.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
+<img width="309" alt="AD 53" src="https://github.com/TerikaJ/configure-ad/assets/136477450/3385cba5-eee4-426a-9485-c3810a00249c">
 </p>
 
 - Next, click "Add...".
-- Type in "Domain_Users" into the Object names box.
-  - _You can also click Check Names like in Step 6._
+- Type "Domain_Users" into the Object Names box.
+  - _You can also click "Check Names" like in Step 6._
 - Once assigned, click "OK" and "OK" again.
-  - _This now makes Client-01 as a normal, non-administrative user._
+  - _This now turns Client-01 into a normal, non-administrative user._
 <p align="center">
-<img src="https://i.imgur.com/PP0Xr1p.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
+<img width="291" alt="AD 55" src="https://github.com/TerikaJ/configure-ad/assets/136477450/fe8e4ad6-cbb6-47a8-bece-6a84edd23475">
+<img width="238" alt="AD 56" src="https://github.com/TerikaJ/configure-ad/assets/136477450/c21cb7dc-5781-4bff-ade2-5f556d2c4ca1">
 </p>
 <hr>
 
-<h3>&#9320; Create additional users and attempt to log into Client-01 with one of them</h3>
+<h3>&#9320; Create additional users and attempt a log-on to Client-01</h3>
 
 - Login to DC-01 as your admin account, if not already (this example uses **jane_admin**).
-- Press the Windows Key/Button and open "PowerShell_ISE" as an Administrator.
+- Click the Windows Key/Button and open "PowerShell_ISE" as an Administrator.
   - _Right-click on PowerShell_ISE and select Run as administrator._
 <p align="center">
-<img src="https://i.imgur.com/js2KU37.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
+<img width="775" alt="AD 58 Step 9 Begins" src="https://github.com/TerikaJ/configure-ad/assets/136477450/537d8519-adad-4f48-9bcc-0ae169937c21">
 </p>
 
 - At the top menu, click on "New Script"
@@ -438,36 +438,40 @@ while ($count -lt $NUMBER_OF_ACCOUNTS_TO_CREATE) {
     </p>
 </details close>
 
-- When ready, at the top menu, click the "Run" button (green play button icon).
+- When ready, at the top menu, click the "Run" button (green play icon).
   - _This script will create 100 accounts using the password "Password1" (variables set at beginning of code).
 These accounts will be placed at its set path: `_EMPLOYEES`, listed near the end of the code._
 <p align="center">
-<img src="https://i.imgur.com/2w34lrh.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
-<img src="https://i.imgur.com/sIr018L.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
+<img width="1135" alt="AD 60" src="https://github.com/TerikaJ/configure-ad/assets/136477450/4f54437a-97c7-4c4b-9c6d-8ba1fbc63dad">
+<img width="1133" alt="AD 61" src="https://github.com/TerikaJ/configure-ad/assets/136477450/69c65939-e6ed-4eac-bb65-28688449a624">
 </p>
 
 - Open "Active Directory Users and Computers" (from the Server Manager or Windows search)
 - Reveal mydomain.com, then reveal `_EMPLOYEES` folder.
-  - _You should see all of the randomly created user accounts in this folder._
+  - _You should see a list of randomly created user accounts in this folder._
 <p align="center">
-<img src="https://i.imgur.com/W8M9O4l.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
+
+
+<img width="776" alt="AD 57" src="https://github.com/TerikaJ/configure-ad/assets/136477450/bf2f28c6-36ab-4083-9db4-9ca53aa2a88a">
+<img width="395" alt="AD 62" src="https://github.com/TerikaJ/configure-ad/assets/136477450/5a56e516-e0c9-4a1f-b7bd-df27bf9e9784">
 </p>
 
 _Next, we're going to attempt to login one of those random users to Client-01 VM._
-- Copy any randomly created user (this example will use **did.cuta**).
-- Logoff of any account currently on Client-01 VM, and attempt to login with the random user.
+- Copy any randomly created user (this example will use **cudi.pom**).
+- Log-off of any account currently on Client-01 VM, and attempt to login with the random user.
   - _Remember to start with the domain name before the username._
 <p align="center">
-<img src="https://i.imgur.com/GHvYS94.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
-<img src="https://i.imgur.com/oXORyTs.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
+<img width="536" alt="AD 63" src="https://github.com/TerikaJ/configure-ad/assets/136477450/fc9f87fb-f433-4f1f-b3dc-ebc81f00c2ad">
+<img width="430" alt="AD 64" src="https://github.com/TerikaJ/configure-ad/assets/136477450/06b7ffd5-9bc6-42a7-b520-79fcdbe15995">
+<img width="1212" alt="AD 65" src="https://github.com/TerikaJ/configure-ad/assets/136477450/876955a2-28d0-40d1-87a5-3fce0786048b">
 </p>
 
-_Whether it's failing at logging into accounts, resetting a password, or protecting against dangerous actors, there will always be a need for assistance to access one's account._
-- Double-click the user's account (this example uses **did.cuta**) to access the properties.
+_Whether it's struggling to log in, resetting a forgotten password, or safeguarding against online threats, the necessity for account assistance remains constant._
+- Double-click the user's account (this example uses **cudi.pom**) to access the properties.
   - _You can also Right-Click on the account for the Context Menu._
   - With this you can unlock accounts, reset passwords, and more!
 <p align="center">
-<img src="https://i.imgur.com/VOUcyyi.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
+<img width="403" alt="AD 66" src="https://github.com/TerikaJ/configure-ad/assets/136477450/75c88390-c00f-4885-a496-476a1b05d523">
 </p>
 <hr>
 
