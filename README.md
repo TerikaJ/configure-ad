@@ -274,20 +274,23 @@ _Next, we'll add a new Admin user account inside the `_ADMINS` folder._
 _The user account is located inside the folder named `_ADMINS`, however, it doesn't have the admin privileges yet, they must be assigned:_
 - Right-click on the new account, click "Properties".
 <p align="center">
+<img width="758" alt="AD 39" src="https://github.com/TerikaJ/configure-ad/assets/136477450/ce5eff90-fe69-42e3-b97b-ef9d44a8f5fe">
 </p>
 
-- Click on the "Member Of" tab, the click the "Add" button.
+- Click the "Member Of" tab, then click the "Add" button.
 - Type in the word "domain", then click "Check Names", allowing to view all already built-in groups.
 - Select "Domain Admins", then "OK".
 - Click "Apply", then "OK" again.
 <p align="center">
-<img src="https://i.imgur.com/ZzPNPHn.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
+<img width="409" alt="AD 40" src="https://github.com/TerikaJ/configure-ad/assets/136477450/0aa9fe42-8fab-454e-8d01-c34a4c0aa0b3">
+<img width="466" alt="AD 41" src="https://github.com/TerikaJ/configure-ad/assets/136477450/f1f816a1-44db-42b1-aae4-aa2f440e8769">
+<img width="582" alt="AD 42" src="https://github.com/TerikaJ/configure-ad/assets/136477450/810806f7-a7ce-46e4-8b2b-1ba8d2b49988">
 </p>
 
-- Once completed, logoff of Domain Controller VM and logon to the newly created admin account with the domain name (this example uses **mydomain.com\jane_admin**).
-  - _We use jane_admin account from now on instead of dcuser._
+- Once completed, log-off the Domain Controller VM and log-on the newly created admin account with the domain name (this example uses **mydomain\jane_admin**).
+  - _We will utilize the jane_admin account instead of dcuser going forward._
 <p align="center">
-<img src="https://i.imgur.com/g9bZXb4.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
+<img width="431" alt="AD 43" src="https://github.com/TerikaJ/configure-ad/assets/136477450/2e840300-8118-48ce-85d5-4f251aa9862c">
 </p>
 <hr>
 
