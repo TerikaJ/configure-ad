@@ -16,7 +16,7 @@ _<b>NOTE:</b> This demonstration uses materials created in the previous demonstr
 - Microsoft Azure (Virtual Machine Resource)
 - Microsoft Remote Desktop
 - Active Directory Domain Services
-- PowerShell
+- PowerShell ISE
 
 <h2>Operating Systems Used </h2>
 
@@ -114,36 +114,38 @@ _Later in this demonstration, we'll need users to login using a domain name inst
 </p>
 <hr>
 
-<h3>&#9315; Ensure Connectivity between the Client and Domain Controller</h3>
+<h3>&#9315; Confirm Connectivity between the Client and Domain Controller</h3>
 
-- Login to both the Domain Controller and Client-01 VMs with Remote Desktop:
-  - In Azure Portal, go to any VM Overview page (this example starts with **Client-01 VM**).
-  - COPY its public IP address (located on the right side).
+- Login to the Domain Controller and Client-01 VM utilizing Remote Desktop:
+  - In Azure Portal, go to the Domain Controller and Client-01 "overview" tab (this example starts with **Client-01 VM**).
+  - COPY the public IP address (located on the right side of the page).
 <p align="center">
-<img src="https://i.imgur.com/l1jop0r.jpg" height="90%" width="90%" alt="Step 3-1"/>
+<img width="587" alt="AD 12 Step 4 Begins" src="https://github.com/TerikaJ/configure-ad/assets/136477450/00e96cbd-8749-4394-98f3-45bd28e720c9">
 </p>
 
-- Press the Windows Key/Button, type and select "Remote Desktop Connection".
+- If you're utilizing a PC you'll press the Windows Key/Button, type and select "Remote Desktop Connection."
+- If you're utilizing MacOS you'll click the application for "Microsoft Remote Desktop" and click "add PC."
 - Input the virtual machine's Public IP Address and click Connect.
-- Enter the username and password, then click OK.
+- Enter the username and password, then click "continue."
 <p align="center">
-<img src="https://i.imgur.com/hcBKjWu.jpg" height="90%" width="90%" alt="Step 3-2"/>
+<img width="594" alt="AD 13" src="https://github.com/TerikaJ/configure-ad/assets/136477450/38468902-10a1-4010-86ce-7cb956f600e3">
+<img width="496" alt="AD 14" src="https://github.com/TerikaJ/configure-ad/assets/136477450/d18e8169-9541-4fbb-8570-3d7715e148b6">
 </p>
 
-- A prompt will appear about the identity cannot be verified; just press "YES".
+- A prompt will appear about the certiicate verfification; just press "YES".
 <p align="center">
-<img src="https://i.imgur.com/3YxlS2G.jpg" height="70%" width="70%" alt="Step 3-3"/>
+<img width="581" alt="AD 15 " src="https://github.com/TerikaJ/configure-ad/assets/136477450/aaa74691-0d1c-4d36-83a1-848bcfd1b2dd">
 </p>
 
 - Minimize the Virtual Machine window and login to the other VM (the Domain Controller).
 <p align="center">
-<img src="https://i.imgur.com/PpLmQO7.jpg" height="90%" width="90%" alt="Step 3-4"/>
-<img src="https://i.imgur.com/2KVQ6D1.png" height="64%" width="64%" alt="Step 3-5"/>
+<img width="1810" alt="AD 16" src="https://github.com/TerikaJ/configure-ad/assets/136477450/0bc3fd35-6091-4529-9665-654f65e798d5">
+<img width="1233" alt="AD 17" src="https://github.com/TerikaJ/configure-ad/assets/136477450/4a904377-8083-49f1-9cb8-35adfe0aad7e">
 </p>
 
 - On the Domain Controller VM, press the Windows Key/Button, then type and select "Windows Defender Firewall with Advanced Security".
 <p align="center">
-<img src="https://i.imgur.com/WulKDTC.png" height="64%" width="64%" alt="Step 3-6"/>
+<img width="467" alt="AD 18" src="https://github.com/TerikaJ/configure-ad/assets/136477450/078f904c-b315-47d1-a3da-3f6e17e38fc5">
 </p>
 
 - Click "Inbound Rules" (on the left sidebar).
@@ -151,25 +153,25 @@ _Later in this demonstration, we'll need users to login using a domain name inst
 - Select them both, then click "Enable Rule" on the right sidebar (or right-click, select).
   - _Make sure that you enable ICMPv4, and NOT ICMPv6!_
 <p align="center">
-<img src="https://i.imgur.com/M1HM7m4.jpg" height="100%" width="100%" alt="Step 3-7"/>
+<img width="1572" alt="AD 19" src="https://github.com/TerikaJ/configure-ad/assets/136477450/154eb120-1422-43e8-ab0d-20615352b38c">
 </p>
 
 - Once enabled, return to the DC-01 VM Overview page in Azure.
 - COPY the Private IP Address.
 <p align="center">
-<img src="https://i.imgur.com/mAvwb9i.jpg" height="100%" width="100%" alt="Step 3-8"/>
+
 </p>
 
-- With that copied, go into the Client-01 VM.
-- Press the Windows key (or Start Button), the type and select CMD or "Command Prompt" (you can run as Admin if desired).
+- Now head into the Client-01 VM.
+- Click the Windows key (or Start Button), type and/or select CMD or "Command Prompt" (run as Admin account if preffered).
 <p align="center">
 <img src="https://i.imgur.com/ca7M8oS.jpg" height="70%" width="70%" alt="Step 3-9"/>
 </p>
 
-- Inside the Command Prompt, type "ping -t {DC-01 Private IP Address}" (this example uses IP address **10.0.0.4**)
-  - _This will infinitely sent data packets for response to the DC-01 VM._
-- This confirms if the Client VM can see the Domain Controller VM successfully, otherwise you'll recieve a "Request Timed Out" message.
-  - _You can either press "Ctrl+C" to stop the ping process, OR you can simply close the Command Prompt._
+- Inside of the Command Prompt, type "ping -t {DC-01 Private IP Address}" (this example uses IP address **10.0.0.4**)
+  - _This command will send an infinite number of data packets to retrieve a responses from the DC-01 VM._
+- In doing this, we can confirm the Client VM's ability to see the Domain Controller VM. Without the response the Client VM would recieve a "Request Timed Out" message.
+  - _To stop the ping process press "Ctrl+C", OR close the Command Prompt._
 <p align="center">
 <img src="https://i.imgur.com/KKT14mt.jpg" height="70%" width="70%" alt="Step 3-10"/>
 </p>
