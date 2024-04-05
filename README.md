@@ -1,12 +1,6 @@
 
 
 
-
-
-
-
-
-
 <p align="center">
 <img src="https://i.imgur.com/R5OzmdT.png" height="55%" width="55%" alt="Microsoft Active Directory Logo"/>
 </p>
@@ -31,17 +25,16 @@ _<b>NOTE:</b> This demonstration uses materials created in the previous demonstr
 
 <h2>High-Level Deployment and Configuration Steps</h2>
 
-- Setup 2 Virtual Machines within Azure:
-  - Domain Controller VM (Windows Server 2022) -- set Private IP Address to STATIC
-  - Client VM (Windows 10) -- using same Resource Group and Vnet as the Domain Controller
+- Setup 2 Virtual Machines in Azure:
+   - Domain Controller VM (Windows Server 2022) with a static private IP.
+   - Client VM (Windows 10) in the same Resource Group and Vnet as the Domain Controller.
 - Login to both VMs using Remote Desktop (RDP).
-- Enable Inbound Rules for "Core Networking Diagnostics" within the Domain Controller's Firewall.
-- This is to ensure connectivity between the Client and Domain Controller.
-- Install Active Directory Domain Services within the Domain Controller Virtual Machine. 
-- Create an Administrator and Standard User Account in Active Directory.
-- Link Client Virtual Machine to a domain, then login using original Administrator account.
-- Setup the Remote Desktop for Non-Administrative users on the Client Virtual Machine.
-- Create additional users and attempt to log into Client VM as one of those newly created users
+- Enable Inbound Rules for "Core Networking Diagnostics" in the Domain Controller's Firewall to ensure connectivity with the Client Machine.
+- Install Active Directory Domain Services in the Domain Controller VM.
+- Create Administrator and Standard User Accounts in Active Directory.
+- Link the Client VM to the domain and login using an Administrator account.
+- Set up Remote Desktop for Non-Administrative users on the Client VM.
+- Create additional users and attempt to log into the Client VM as one of the newly created users.
 
 <h2>Step Process</h2>
 
