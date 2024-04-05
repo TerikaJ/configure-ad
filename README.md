@@ -4,6 +4,9 @@
 
 
 
+
+
+
 <p align="center">
 <img src="https://i.imgur.com/R5OzmdT.png" height="55%" width="55%" alt="Microsoft Active Directory Logo"/>
 </p>
@@ -75,7 +78,7 @@ _<b>NOTE:</b> This demonstration uses materials created in the previous demonstr
 - Change the Image to a Windows OS (this example uses **Windows 10 Pro, version 22H2 - x64 Gen2**).
 - Once done, click "Next" until you reach "Networking" (OR you can simply click the Networking tab at the top).
 <p align="center">
-<img src="https://i.imgur.com/SDbD5nV.jpg" height="70%" width="70%" alt="Step 1-3"/>
+<img width="495" alt="AD 4 Step 2 Begins" src="https://github.com/TerikaJ/configure-ad/assets/136477450/ebec22cd-9960-4210-a267-fe4278dfe16c">
 </p>
 
 - Make sure that the "Virtual network" is set to the Vnet that the Domain Controller VM automatically created (this example uses **DC-01-vnet**).
@@ -84,7 +87,10 @@ _<b>NOTE:</b> This demonstration uses materials created in the previous demonstr
 - Skip everything else and click "Review + create".
 - If Validation passed, click "Create".
 <p align="center">
-<img src="https://i.imgur.com/SiHJ4N0.jpg" height="70%" width="70%" alt="Step 1-4"/>
+
+<img width="592" alt="AD 5" src="https://github.com/TerikaJ/configure-ad/assets/136477450/1ac78801-b98a-4084-a780-5ee387c5b983">
+
+<img width="587" alt="AD 6" src="https://github.com/TerikaJ/configure-ad/assets/136477450/799f13fb-54a5-46d6-89ac-86ede59f2833">
 </p>
 <hr>
 
