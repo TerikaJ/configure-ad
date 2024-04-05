@@ -91,22 +91,26 @@ _<b>NOTE:</b> This demonstration uses materials created in the previous demonstr
 
 _Later in this demonstration, we'll need users to login using a domain name instead of their standard username, so we'll have to make sure the Domain Controller's NIC Private IP address doesn't get changed in the future:_
 - From Azure Portal, go to DC-01 VM Overview page.
-- Click on "Networking", then click on the "Network Interface" (this example uses **dc-01667**).
+- Click on "Networking", then click on the "Network Interface" (this example uses **dc-01505**).
 <p align="center">
-<img src="https://i.imgur.com/OV6YK9L.jpg" height="70%" width="70%" alt="Step 2-1"/>
+
+<img width="274" alt="AD 7 Step 3 Begins" src="https://github.com/TerikaJ/configure-ad/assets/136477450/9b71150d-2019-4c20-80a5-4779f30d8049">
+<img width="563" alt="AD 8" src="https://github.com/TerikaJ/configure-ad/assets/136477450/20f4477e-a1f6-4616-9dce-378575f8b3f2">
 </p>
 
 - Click on "IP configurations" on the left.
 - You can see that the Private IP address is Dynamic.
-  - Click on "ipconfig1".
+  - Click "ipconfig1".
 <p align="center">
-<img src="https://i.imgur.com/AzqdoWb.jpg" height="70%" width="70%" alt="Step 2-2"/>
+<img width="563" alt="AD 8" src="https://github.com/TerikaJ/configure-ad/assets/136477450/3ec39d89-0c0e-4a06-aa96-cb59269d034c">
 </p>
 
-- Change the Assignment at the bottom to "Static".
+- Change the assignment to "Static".
 - Click "Save".
 <p align="center">
-<img src="https://i.imgur.com/S6HX1sJ.jpg" height="70%" width="70%" alt="Step 2-3"/>
+<img width="1094" alt="AD 9" src="https://github.com/TerikaJ/configure-ad/assets/136477450/39dd31ef-cca4-4ab5-bfe5-c9a980e8e03c">
+<img width="1427" alt="AD 10" src="https://github.com/TerikaJ/configure-ad/assets/136477450/b480923f-48dd-4f4d-9b61-7ad6d78df498">
+<img width="429" alt="AD 11" src="https://github.com/TerikaJ/configure-ad/assets/136477450/344a8117-3e0a-47d3-9599-50231a0ca86d">
 </p>
 <hr>
 
