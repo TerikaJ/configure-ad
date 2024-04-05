@@ -87,7 +87,7 @@ _<b>NOTE:</b> This demonstration uses materials created in the previous demonstr
 </p>
 <hr>
 
-<h3>&#9314; Assign Domain Controller's Private IP address to STATIC</h3>
+<h3>&#9314; Assign STATIC to the Domain Controller's Private IP address</h3>
 
 _Later in this demonstration, we'll need users to login using a domain name instead of their standard username, so we'll have to make sure the Domain Controller's NIC Private IP address doesn't get changed in the future:_
 - From Azure Portal, go to DC-01 VM Overview page.
