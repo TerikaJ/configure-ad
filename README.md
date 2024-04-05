@@ -296,49 +296,50 @@ _The user account is located inside the folder named `_ADMINS`, however, it does
 
 <h3>&#9318; Join Client-01 to the domain (mydomain.com)</h3>
 
-- From Azure Portal, go to Client-01 VM Overview page.
-- Click on "Networking", then click on the "Network Interface" (this example uses **client-01857**).
+- From the Azure Portal, navigate to the Client-01 VM Overview page.
+- Click "Network Settings", then click the "Network Interface" (this example uses **client-01591**).
 <p align="center">
-<img src="https://i.imgur.com/eHiv28J.jpg" height="70%" width="70%" alt="Step 2-1"/>
+<img width="181" alt="AD 44 Step 7 Begins" src="https://github.com/TerikaJ/configure-ad/assets/136477450/b2abb720-e28a-4fe8-bf24-ab06fec1163d">
+<img width="787" alt="AD 45" src="https://github.com/TerikaJ/configure-ad/assets/136477450/253ab65d-5051-4bb5-8686-addd0f789845">
 </p>
 
-- Go to "DNS servers" on the left sidebar.
-- Select "Custom" option under DNS servers.
+- Navigate to "DNS servers" on the left sidebar.
+- Select the "Custom" option under DNS servers.
 - Input the DC's Private IP Address (this example uses **10.0.0.4**).
 - Click "Save".
 - Restart Client-01 VM.
   - _You can also press the Restart button in the Client-01 VM Overview page_.
   - _Logon again to Client-01 VM_.
 <p align="center">
-<img src="https://i.imgur.com/LaLsiSk.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
-<img src="https://i.imgur.com/Sg9pvYY.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
+<img width="485" alt="AD 46" src="https://github.com/TerikaJ/configure-ad/assets/136477450/c882bfbc-2737-40e6-902a-8be4f69c5ffa">
+<img width="528" alt="AD 47" src="https://github.com/TerikaJ/configure-ad/assets/136477450/59d30043-669b-46e0-93f4-82ff20355f39">
 </p>
 
 - On Client-01 VM, Right-click the Windows Button and select "System".
 <p align="center">
-<img src="https://i.imgur.com/JBMFeOM.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
+<img width="330" alt="AD 48" src="https://github.com/TerikaJ/configure-ad/assets/136477450/a5e2305f-87a2-45a1-bc36-62ee376c5707">
 </p>
 
 - Click on "Rename this PC (advanced)"
 <p align="center">
-<img src="https://i.imgur.com/BnEqRHf.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
+<img width="907" alt="AD 49" src="https://github.com/TerikaJ/configure-ad/assets/136477450/1f2e9abc-5908-4008-b4ee-a30ad1617b51">
 </p>
 
 - Within the System Properties window, click "Change".
   - _This will allow us to use the domain name connected to the Domain Controller._
 - Under Member Of, select "Domain" option, then type your domain name (this example uses **mydomain.com**).
-- Then click "OK".
+- Click "OK".
   - _A login prompt will appear._
 <p align="center">
-<img src="https://i.imgur.com/ERxuEiv.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
+<img width="323" alt="AD 50" src="https://github.com/TerikaJ/configure-ad/assets/136477450/f9737f39-0afc-401e-91ef-97fa8be96e7b">
 </p>
 
-- Enter the Admin user's logon credentials (this example uses **mydomain.com\jane_admin**).
+- Enter the Admin user's log-on credentials (this example uses **mydomain\jane_admin**).
 - Click "OK".
 - If done correctly, you should see a welcoming window appear to joining the domain.
-- Click "OK" again and prompts you to require a restart.
+- Click "OK" again and you'll be prompted to restart the computer.
 <p align="center">
-<img src="https://i.imgur.com/RRCV4F5.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
+<img width="434" alt="AD 51" src="https://github.com/TerikaJ/configure-ad/assets/136477450/955feb2b-21c4-440b-a416-5b38f5c5eb7b">
 <img src="https://i.imgur.com/WjWrOQL.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
 <img src="https://i.imgur.com/ylYxFqS.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
 </p>
