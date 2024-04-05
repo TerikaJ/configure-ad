@@ -150,8 +150,8 @@ _Later in this demonstration, we'll need users to login using a domain name inst
 
 - Click "Inbound Rules" (on the left sidebar).
 - Find the two names "Core Networking Diagnostics - ICMP Echo Request (ICMPv4-In)" (easier to sort by Protocol).
-- Select them both, then click "Enable Rule" on the right sidebar (or right-click, select).
-  - _Make sure that you enable ICMPv4, and NOT ICMPv6!_
+- Select both by utilizing the shift key, then click "Enable Rule" on the right sidebar (or right-click, select).
+  - _Please ensure to enable ICMPv4, and NOT ICMPv6!_
 <p align="center">
 <img width="1572" alt="AD 19" src="https://github.com/TerikaJ/configure-ad/assets/136477450/154eb120-1422-43e8-ab0d-20615352b38c">
 </p>
@@ -179,56 +179,61 @@ _Later in this demonstration, we'll need users to login using a domain name inst
 
 <h3>&#9316; Install Active Directory Domain Services within Domain Controller VM</h3>
 
-- Login to DC-01 VM and open "Server Manager" (if not open already).
-- Click on "Add Roles and Features" (Number 2) on the front page.
+- Login to the DC-01 VM and open "Server Manager" (if not open already).
+- Click "Add Roles and Features" (Option Number 2) on the main page (Server Manager).
 <p align="center">
 <img src="https://i.imgur.com/LKpjSjC.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
 </p>
 
-- Keep clicking "Next" until you reach Server Roles tab.
-- Checkmark "Active Directory Domain Services", and prompt will appear:
+- Continue to click "Next" until you reach Server Roles tab.
+- Checkmark "Active Directory Domain Services", and a prompt will appear:
 - Click "Add Features".
-- Keep clicking "Next" until the Confirmation tab.
-- Click "Install" then close once completed.
+- Continue to click "Next" until you reach the Confirmation tab.
+- Click "Install", and close once completed.
 <p align="center">
-<img src="https://i.imgur.com/nRniK70.jpg" height="100%" width="100%" alt="Azure Step 5-5"/>
+<img width="788" alt="AD 21 Step 5 Begins" src="https://github.com/TerikaJ/configure-ad/assets/136477450/eabd2519-311c-420e-ae73-f4e201a014f6">
+<img width="780" alt="AD 22" src="https://github.com/TerikaJ/configure-ad/assets/136477450/5147911d-744b-4c6c-9850-74880ad48c58">
+<img width="782" alt="AD 23" src="https://github.com/TerikaJ/configure-ad/assets/136477450/810d2974-0607-4663-8c3d-1e9cfca2000c">
+<img width="784" alt="AD 24" src="https://github.com/TerikaJ/configure-ad/assets/136477450/7fc5116b-97e3-4834-a81e-0ce34cccc7a2">
 </p>
 
-- Back on the Server Manager, click on the flag icon with a caution symbol on it (located at top-right header).
+- Back on the Server Manager, click the flag icon with the caution symbol (located at top-right header).
 - Click "Promote this server to a domain controller"
 <p align="center">
-<img src="https://i.imgur.com/5SEF3r7.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
+
+<img width="1677" alt="AD 25" src="https://github.com/TerikaJ/configure-ad/assets/136477450/f5f40d00-1666-4a96-93d6-fd7adac55f6b">
 </p>
 
 - In the Deployment Configuration tab, select "Add a new forest".
 - Type any domain name you wish to use (this example uses **mydomain.com**)
 - Click "Next".
 <p align="center">
-<img src="https://i.imgur.com/KqLJ1zR.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
+<img width="781" alt="AD 26" src="https://github.com/TerikaJ/configure-ad/assets/136477450/af19df5e-c8ee-4d71-9c76-62ece039f97d">
 </p>
 
 - Create a password of your choice.
 - Keep clicking "Next" until the "Install" option is enabled, then click "Install".
   - _Installing will result in restarting the Domain Controller VM._
 <p align="center">
-<img src="https://i.imgur.com/sOfwFw2.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
-<img src="https://i.imgur.com/GGJhNCF.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
-<img src="https://i.imgur.com/8eabtaB.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
+<img width="777" alt="AD 27" src="https://github.com/TerikaJ/configure-ad/assets/136477450/6e25e866-e88f-43af-b4d5-6a6797f9d8fa">
+<img width="781" alt="AD 28" src="https://github.com/TerikaJ/configure-ad/assets/136477450/f27d85cc-d2c8-43b5-a877-132bf53d7113">
+<img width="777" alt="AD 29" src="https://github.com/TerikaJ/configure-ad/assets/136477450/594dddc5-3878-40b9-98ed-d08db29ef3e9">
 </p>
 
 - Once completed, log back into the DC-01 VM.
-  - _However, you should not be able use the same username as before, now that it requires the domain name._
-- Select "More Choices", then click "Use a different account".
-- Change the username to add the domain name at the beginning of the original username (this example used mydomain.com, thus the username becomes **mydomain.com\dcuser**)
-  - _NOTE: Don't forget what password to use when logging into the DC-01 VM!_
+  - _You should not be able use the previous username (Log in requires the domain name)_
+- If you're using Windows, you'll select "More Choices", then click "Use a different account".
+- If you're using MacOS you'll click connect just as before. 
+- Add the domain name to the beginning of the original username (this example used mydomain, thus the username becomes **mydomain\dcuser**)
+  - _NOTE: Do not forget to document the password you used when logging into the DC-01 VM!_
 <p align="center">
-<img src="https://i.imgur.com/ruqHto2.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
+<img width="437" alt="AD 31" src="https://github.com/TerikaJ/configure-ad/assets/136477450/87de5e10-5950-43f7-8499-fbb564ffc078">
 </p>
 <hr>
 
 <h3>&#9317; Create an Admin Account in Active Directory</h3>
 
-- On the Domain Controller VM, in Server Manager, click on "Tools" on the top-right header.
+- On the Domain Controller VM, go into the Server Manager, click on "Tools" in the top-right header.
 - Click "Active Directory Users and Computers".
   - _This can also be searched from the Windows Key/Button._
 <p align="center">
