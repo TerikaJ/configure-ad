@@ -1,3 +1,9 @@
+
+
+
+
+
+
 <p align="center">
 <img src="https://i.imgur.com/R5OzmdT.png" height="55%" width="55%" alt="Microsoft Active Directory Logo"/>
 </p>
@@ -42,7 +48,7 @@ _<b>NOTE:</b> This demonstration uses materials created in the previous demonstr
   - If "Virtual machines" is already listed on the front page, then you can simply click on it, rather than manually searching.
 - Click "Create", then select "Azure virtual machine".
 <p align="center">
-<img src="https://i.imgur.com/tiC5aA4.jpg" height="80%" width="80%" alt="Step 1-1"/>
+<img width="450" alt="AD 1 Step 1 Begins" src="https://github.com/TerikaJ/configure-ad/assets/136477450/b38988c8-5a75-4ceb-888d-c4c873e34fc2">
 </p>
 
 - Name your Virtual Machine anyway you want (this example uses **DC-01**).
@@ -55,7 +61,8 @@ _<b>NOTE:</b> This demonstration uses materials created in the previous demonstr
   - IF there is a Licensing Checkbox at the end, make sure that is CHECKED!
 - If Validation passed, click "Create".
 <p align="center">
-<img src="https://i.imgur.com/RVHx4nb.png" height="70%" width="70%" alt="Step 1-2"/>
+<img width="450" alt="AD 2" src="https://github.com/TerikaJ/configure-ad/assets/136477450/10efb989-a196-404c-9beb-7ec39ff97baa">
+<img width="450" alt="AD 3" src="https://github.com/TerikaJ/configure-ad/assets/136477450/a98898b5-d29b-461b-9a71-7ef663a3cb29">
 </p>
 <hr>
 
