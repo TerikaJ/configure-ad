@@ -235,43 +235,45 @@ _Later in this demonstration, we'll need users to login using a domain name inst
 
 - On the Domain Controller VM, go into the Server Manager, click on "Tools" in the top-right header.
 - Click "Active Directory Users and Computers".
-  - _This can also be searched from the Windows Key/Button._
+  - _This can also be searched through clicking the Windows Key/Button._
 <p align="center">
-<img src="https://i.imgur.com/qvdckjx.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
+
+<img width="358" alt="AD 32 Step 6 Begins" src="https://github.com/TerikaJ/configure-ad/assets/136477450/574774af-a743-4459-a9af-8a2a5bd4d74d">
 </p>
 
-_For this demonstration, we will create 2 new folders within mydomain.com (also known as "Organizational Unit")_
+_For this demonstration, we will create 2 new folders within mydomain.com_
+_These folders also known as "Organizational Units_
 - Right-click "mydomain.com" on the left sidebar.
-- Hover "New", then click "Organizational Unit".
+- Hover your mouse over "New", then click "Organizational Unit".
 <p align="center">
-<img src="https://i.imgur.com/4Jm0gW5.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
+<img width="790" alt="AD 33" src="https://github.com/TerikaJ/configure-ad/assets/136477450/d3e27a15-0a34-4724-88c1-9e8b796a1b0e">
 </p>
 
 - Name one `_EMPLOYEES` and the other `_ADMINS`.
 <p align="center">
-<img src="https://i.imgur.com/YNpRK8u.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
+<img width="442" alt="AD 34" src="https://github.com/TerikaJ/configure-ad/assets/136477450/10f54e29-9375-4882-a346-a889011d39cc">
 </p>
 
 _Next, we'll add a new Admin user account inside the `_ADMINS` folder._
   - Right-click on `_ADMINS`(or any empty space within the folder).
-  - Hover "New", then click "User".
+  - Hover your mouse over "New", then click "User".
 <p align="center">
-<img src="https://i.imgur.com/x9FzS23.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
+<img width="767" alt="AD 36" src="https://github.com/TerikaJ/configure-ad/assets/136477450/4cf8d4f3-2818-4adb-af86-2ce80bf4f8dd">
 </p>
 
-- Create a first and last name, as well as a logon name for this Admin user, then click "Next" (this example uses **Jane Doe** / **jane_admin**)
-- Create a password of your choice for that account.
+- Create a first and last name, as well as a log-on name for the Admin user, then click "Next" (this example uses **Jane Doe** / **jane_admin**)
+- Create a password of your choice for the account.
 - Uncheck "User must change password at next logon".
 - Checkmark "Password never expires".
 - Click "Next" until the account is created.
 <p align="center">
-<img src="https://i.imgur.com/vTN4ckZ.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
+<img width="439" alt="AD 37" src="https://github.com/TerikaJ/configure-ad/assets/136477450/89784c41-906a-43c4-8e37-1204f298c015">
+<img width="445" alt="AD 38" src="https://github.com/TerikaJ/configure-ad/assets/136477450/b88e592a-993c-4248-a9fb-35a03ec24de5">
 </p>
 
-_The user account is only inside a folder named `_ADMINS`, but doesn't mean it has the privileges as one, so:_
-- Right-click on the new account, then click "Properties".
+_The user account is located inside the folder named `_ADMINS`, however, it doesn't have the admin privileges yet, they must be assigned:_
+- Right-click on the new account, click "Properties".
 <p align="center">
-<img src="https://i.imgur.com/6dV5m0S.jpg" height="70%" width="70%" alt="Azure Step 5-5"/>
 </p>
 
 - Click on the "Member Of" tab, the click the "Add" button.
