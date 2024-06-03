@@ -378,6 +378,7 @@ _The user account is located inside the folder named `_ADMINS`, however, it does
 
 - Login to DC-01 as your admin account, if not already (this example uses **jane_admin**).
 - Click the Windows Key/Button and open "PowerShell_ISE" as an Administrator.
+  - IMPORTANT: Run the program as an **ADMINISTRATOR**
   - _Right-click on PowerShell_ISE and select Run as administrator._
 <p align="center">
 <img width="775" alt="AD 58 Step 9 Begins" src="https://github.com/TerikaJ/configure-ad/assets/136477450/537d8519-adad-4f48-9bcc-0ae169937c21">
@@ -389,9 +390,10 @@ _The user account is located inside the folder named `_ADMINS`, however, it does
 <details close>
   <summary> PowerShell Script </summary>
   <p>
+
  # ----- Edit these Variables for your own Use Case ----- #
 $PASSWORD_FOR_USERS   = "Password1"
-$NUMBER_OF_ACCOUNTS_TO_CREATE = 100
+$NUMBER_OF_ACCOUNTS_TO_CREATE = 10000
 # ------------------------------------------------------ #
 
 Function generate-random-name() {
@@ -435,6 +437,8 @@ while ($count -lt $NUMBER_OF_ACCOUNTS_TO_CREATE) {
                -Enabled $true
     $count++
 }
+
+     
     </p>
 </details close>
 
